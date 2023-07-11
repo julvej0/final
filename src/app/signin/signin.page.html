@@ -1,0 +1,14 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ul>
+      <li><a routerLink="/discover">Discover</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/join">Join</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/create">Create</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/my-projects">My Projects</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+      <ion-button (click)="login()">login</ion-button>
+    </ul>
+  </div>
+</ion-content>

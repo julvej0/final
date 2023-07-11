@@ -1,0 +1,68 @@
+ion-content{
+    --background: #2F3038;
+}
+
+@media (max-width: 820px) {
+    .signup-fab {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .signup-fab {
+        display: none;
+    }
+}
+
+.indent {
+    text-indent: 10px;
+    color: white;
+    font-weight: 200;
+    margin-top: 2px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 15%;
+}
+
+.logo-img{
+    height: 600px;
+    width: 500px;
+}
+
+.card {
+    background: rgb(102,153,153);
+    background: linear-gradient(169deg, rgba(102,153,153,1) 35%, rgba(255,102,51,1) 100%);
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 0;
+    border-radius: 10px;
+}
+
+.signup-btn{
+    margin: auto;
+    background-color: #202027;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+}
+
+input{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    height: 30px;
+    color: white;
+    text-indent: 10px;
+    font-size: 12px;
+    font-weight: 200;
+}

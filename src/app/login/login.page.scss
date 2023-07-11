@@ -1,0 +1,87 @@
+ion-content{
+    --background: #2F3038;
+}
+
+@media (max-width: 1000px) {
+    .login-fab {
+        display: none;
+    }
+}
+
+.indent {
+    text-indent: 10px;
+    color: white;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 15%;
+}
+
+.logo-img{
+    height: 600px;
+    width: 500px;
+}
+
+.card {
+    background: rgb(102,153,153);
+    background: linear-gradient(169deg, rgba(102,153,153,1) 35%, rgba(255,102,51,1) 100%);
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px;
+    border-radius: 10px;
+}
+
+.login-btn{
+    margin: auto;
+    background-color: #202027;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup-container p{
+    color: rgb(255, 255, 255);
+    font-style: bold;
+}
+
+.signup-btn{
+    background-color: rgba(102,153,153,1);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 25px;
+    font-weight: 200;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    height: 50px;
+    color: white;
+    text-indent: 10px;
+    font-size: 15px;
+    font-weight: 200;
+}

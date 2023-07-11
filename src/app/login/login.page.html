@@ -1,0 +1,22 @@
+<ion-content>
+  <div class="container">
+
+    <ion-img src="../../assets/Logo1.png" class="logo-img login-fab"></ion-img>
+
+    <ion-card class="card">
+      <ion-label class="indent">Email Address:</ion-label>
+      <input type="email" [(ngModel)]="email">
+
+      <ion-label class="indent">Password:</ion-label>
+      <input type="password" [(ngModel)]="pass">
+
+      <div class="login-btn" (click)="login()">Login</div>
+
+      <div class="signup-container">
+        <p>Not Register Yet?</p>
+        <div class="signup-btn" routerLink="/signup">Sign Up</div>
+      </div>
+      
+    </ion-card>
+  </div>
+</ion-content>

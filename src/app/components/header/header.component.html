@@ -1,0 +1,49 @@
+<ion-menu contentId="main-content" side="end">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-menu-toggle>
+        <ion-icon name="reorder-three-outline" size="large"></ion-icon>
+      </ion-menu-toggle>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-buttons>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-button class="first-btn">Discover</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button>Join</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button>About Us</ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-buttons>
+  </ion-content>
+</ion-menu>
+
+<ion-header id="main-content">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-img src="../../assets/Auxilium.png" alt="Auxilium" class="header-img" routerLink="/login"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="mobile-fab">Discover</ion-button>
+      <ion-button *ngIf="!isLoggedIn" class="mobile-fab">Join</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="mobile-fab">Create</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="mobile-fab">Your Project</ion-button>
+      <ion-button class="mobile-fab">About Us</ion-button>
+      <div class="login-profile">
+        <ion-button *ngIf="inSignUp" class="mobile-fab login-btn">Login</ion-button>
+        <div *ngIf="isLoggedIn" class="mobile-fab profile">
+          <p>Student Name</p>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </div>
+      </div>
+      <ion-menu-button class="web-fab"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
