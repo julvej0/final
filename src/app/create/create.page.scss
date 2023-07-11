@@ -17,11 +17,12 @@ ion-content{
     margin: 15px 0;
     display: flex;
     align-items: center;
-    margin-top: 90px;
     font-size: 50px;
     padding: 10px;
     background: rgb(102,153,153);
-    background: linear-gradient(273deg, rgba(102,153,153,1) 0%, rgba(255,102,51,1) 100%);}
+    background: linear-gradient(273deg, rgba(102,153,153,1) 0%, rgba(255,102,51,1) 100%);
+    color: white;
+}
 
 .flex{
     display: flex;
@@ -39,11 +40,12 @@ ion-content{
     }
 
     .left{
+        width: 275px;
+
         ion-card {
             background: rgb(102,153,153);
             background: linear-gradient(86deg, rgba(102,153,153,1) 10%, rgba(255,102,51,1) 140%);
         }
-        width: 275px;
 
         .add{
             cursor: pointer;
@@ -143,6 +145,7 @@ ion-content{
             input{
                 border-radius: 5px;
                 height: 20px;
+                word-break: break-word;
             }
         }
 
@@ -151,6 +154,7 @@ ion-content{
             flex-direction: column;
             gap: 5px;
             height: 130px;
+
             div {
                 display: flex;
                 align-items: center;
@@ -215,6 +219,7 @@ ion-label{
     display: flex;
     justify-content: flex-end;
     margin: 20px 0 0 0;
+    
     div{
         background-color: rgba(102,153,153,1);
         color: white;

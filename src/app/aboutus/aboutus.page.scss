@@ -1,0 +1,44 @@
+ion-content{
+    --background: #2F3038;
+  }
+    
+  @media (max-width: 1000px) {
+    .aboutus-fab {
+      display: none;
+    }
+  }
+    
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .logo-img{
+    height: auto;
+    width: 450px;
+  }
+  
+  .banner {
+    height: 90px;
+    margin: 15px 0;
+    font-size: 50px;
+    padding: 10px;
+    background: rgb(102,153,153);
+    background: linear-gradient(273deg, rgba(102,153,153,1) 0%, rgba(255,102,51,1) 100%);
+    color: white;
+  }
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    padding: 0 10px;
+    height: 100%;
+  
+    h5{
+      width: 500px;
+      color: white;
+    }
+  }

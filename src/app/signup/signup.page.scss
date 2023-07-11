@@ -2,23 +2,10 @@ ion-content{
     --background: #2F3038;
 }
 
-@media (max-width: 820px) {
-    .signup-fab {
-        display: none;
-    }
-}
-
 @media (max-width: 1000px) {
     .signup-fab {
         display: none;
     }
-}
-
-.indent {
-    text-indent: 10px;
-    color: white;
-    font-weight: 200;
-    margin-top: 2px;
 }
 
 .container {
@@ -43,26 +30,33 @@ ion-content{
     flex-direction: column;
     padding: 30px 10px 0;
     border-radius: 10px;
-}
 
-.signup-btn{
-    margin: auto;
-    background-color: #202027;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 40px;
-    font-weight: 200;
-    color: white;
-    cursor: pointer;
-}
+    .indent {
+        text-indent: 10px;
+        color: white;
+        font-weight: 200;
+        margin-top: 2px;
+    }
 
-input{
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 8px;
-    height: 30px;
-    color: white;
-    text-indent: 10px;
-    font-size: 12px;
-    font-weight: 200;
+    input{
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 8px;
+        height: 30px;
+        color: white;
+        text-indent: 10px;
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .signup-btn{
+        margin: auto;
+        background-color: #202027;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 40px;
+        font-weight: 200;
+        color: white;
+        cursor: pointer;
+    }
 }

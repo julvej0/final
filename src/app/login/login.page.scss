@@ -39,6 +39,17 @@ ion-content{
     border-radius: 10px;
 }
 
+input{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    height: 50px;
+    color: white;
+    text-indent: 10px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
 .login-btn{
     margin: auto;
     background-color: #202027;
@@ -50,7 +61,7 @@ ion-content{
     cursor: pointer;
 }
 
-.signup-container {
+.signup-card {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     display: flex;
@@ -58,30 +69,20 @@ ion-content{
     padding: 8px 20px;
     justify-content: space-between;
     align-items: center;
-}
 
-.signup-container p{
-    color: rgb(255, 255, 255);
-    font-style: bold;
-}
+    p{
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-.signup-btn{
-    background-color: rgba(102,153,153,1);
-    color: white;
-    border-radius: 5px;
-    padding: 5px 25px;
-    font-weight: 200;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-input{
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 8px;
-    height: 50px;
-    color: white;
-    text-indent: 10px;
-    font-size: 15px;
-    font-weight: 200;
+    .signup-btn{
+        background-color: rgba(102,153,153,1);
+        color: white;
+        border-radius: 5px;
+        padding: 5px 25px;
+        font-weight: 200;
+        cursor: pointer;
+        font-size: 15px;
+    }
 }

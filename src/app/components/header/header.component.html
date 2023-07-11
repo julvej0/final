@@ -16,7 +16,7 @@
           <ion-button>Join</ion-button>
         </ion-row>
         <ion-row class="ion-justify-content-center">
-          <ion-button>About Us</ion-button>
+          <ion-button routerLink="/aboutus">About Us</ion-button>
         </ion-row>
       </ion-grid>
     </ion-buttons>
@@ -26,14 +26,14 @@
 <ion-header id="main-content">
   <ion-toolbar>
     <ion-buttons slot="start" >
-      <ion-img src="../../assets/Auxilium.png" alt="Auxilium" class="header-img" routerLink="/login"></ion-img>
+      <ion-img src="../../assets/Auxilium.png" alt="Auxilium" class="header-img" routerLink="/landing"></ion-img>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button class="mobile-fab">Discover</ion-button>
       <ion-button *ngIf="!isLoggedIn" class="mobile-fab">Join</ion-button>
       <ion-button *ngIf="isLoggedIn" class="mobile-fab">Create</ion-button>
       <ion-button *ngIf="isLoggedIn" class="mobile-fab">Your Project</ion-button>
-      <ion-button class="mobile-fab">About Us</ion-button>
+      <ion-button class="mobile-fab" routerLink="/aboutus">About Us</ion-button>
       <div class="login-profile">
         <ion-button *ngIf="inSignUp" class="mobile-fab login-btn">Login</ion-button>
         <div *ngIf="isLoggedIn" class="mobile-fab profile">
