@@ -49,14 +49,6 @@ export class CreatePage implements OnInit {
 
   ngOnInit() {
     this.currentStep = 1
-    const mediaQuery = window.matchMedia('(min-width: 1430px)');
-    this.hideContainer = mediaQuery.matches;
-
-    mediaQuery.addEventListener('change', (event) => {
-      // Update the hideContainer property based on the media query
-      this.hideContainer = event.matches;
-      this.currentStep = 1
-    });
   }
 
 }

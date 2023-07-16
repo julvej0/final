@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-dummy',
+  templateUrl: './dummy.page.html',
+  styleUrls: ['./dummy.page.scss'],
 })
-export class HomePage {
+export class DummyPage implements OnInit {
   hideContainer!: boolean;
   currentStep = 0;
   name!:string
@@ -48,15 +48,16 @@ export class HomePage {
   }
 
   ngOnInit() {
-    this.currentStep = 4
+    this.currentStep = 1
     const mediaQuery = window.matchMedia('(min-width: 1430px)');
     this.hideContainer = mediaQuery.matches;
 
     mediaQuery.addEventListener('change', (event) => {
       // Update the hideContainer property based on the media query
       this.hideContainer = event.matches;
-      this.currentStep = 4
+      this.currentStep = 1
     });
   }
+  
 
 }

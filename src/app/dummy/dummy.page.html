@@ -1,5 +1,6 @@
 <ion-content>
   <div class="container">
+    <div class="banner">Start a Project</div>
     <form #myForm="ngForm">
       <div class="pad-container">
         <div class="wrapper">
@@ -22,7 +23,7 @@
           </ng-container>
           <div class="center">
             <ng-container *ngIf="hideContainer || currentStep === 2">
-              <ion-card  class="flex">
+              <ion-card class="flex">
                 <div class="project-info-card flex">
                   <ion-card-title>Project Info</ion-card-title>
                   <ion-label>Title:</ion-label>
@@ -78,12 +79,15 @@
               <ng-container *ngIf="hideContainer || currentStep === 3">
                 <div>
                   <ion-label>Introduction:</ion-label>
-                  <ion-textarea name="introduction" required [(ngModel)]="introduction"></ion-textarea>
+                  <!-- <input type="text" class="big"> -->
+                  <ion-textarea fill="outline" name="introduction" required [(ngModel)]="introduction"></ion-textarea>
                   <ion-label>Background:</ion-label>
 
-                  <ion-textarea name="background" required [(ngModel)]="background"></ion-textarea>
+                  <ion-textarea fill="outline" name="background" required [(ngModel)]="background"></ion-textarea>
+                  <!-- <input type="text" class="big"> -->
                   <ion-label>Methodology:</ion-label>
-                  <ion-textarea name="methodology" required [(ngModel)]="methodology"></ion-textarea>
+                  <ion-textarea fill="outline" name="methodology" required [(ngModel)]="methodology"></ion-textarea>
+                  <!-- <input type="text" class="big"> -->
                 </div>
               </ng-container>
               <div class="another-page">
@@ -92,7 +96,7 @@
                     <div class="add-header">
                       <ion-card-content>Add Header Image</ion-card-content>
                       <div class="img transparent-card">
-                        <ion-img src="/assets/app-icons/add-sign-small.png"></ion-img>
+                        <ion-img src="../../assets/AddSign.png"></ion-img>
                       </div>
                     </div>
                     <div class="scope">
@@ -128,7 +132,7 @@
         </div>
         <div class="for-mobile" [ngClass]="{'flex-end' : currentStep == 1}">
           <div class="btn" *ngIf="currentStep > 1" (click)="previous()">Previous</div>
-          <button class="btn disabled-btn" *ngIf="currentStep > 0 && currentStep < 4"
+          <button class="btn disabled-btn" *ngIf="currentStep > 0 && currentStep < 4" [disabled]="!myForm.valid"
             (click)="next()">Next</button>
           <button class="btn disabled-btn" *ngIf="currentStep === 4" [disabled]="!myForm.valid"
             (click)="submit()">Submit</button>
