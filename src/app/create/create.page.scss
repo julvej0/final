@@ -138,6 +138,13 @@ form{
     .right {
         width: 744px;
 
+        ion-textarea{
+            border: 2px solid white;
+            --highlight-color-invalid: none;
+            --highlight-color-valid: none;
+            
+        }
+
         ion-card{
             background: rgb(102,153,153);
             background: linear-gradient(85deg, rgba(102,153,153,1) 32%, rgba(255,102,51,1) 150%);
@@ -231,7 +238,7 @@ ion-label{
     margin: 20px 0 0 0;
     width: 100%;
     
-    div{
+    button{
         background-color: rgba(102,153,153,1);
         color: white;
         border-radius: 5px;
@@ -239,6 +246,10 @@ ion-label{
         font-weight: 200;
         cursor: pointer;
         font-size: 15px;
+    }
+
+    button:disabled{
+        background-color: gray;
     }
 }
 

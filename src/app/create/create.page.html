@@ -136,7 +136,7 @@
                     <button class="btn disabled-btn" *ngIf="currentStep === 4" [disabled]="!myForm.valid" (click)="submit()">Submit</button>
                 </div>
                 <div class="submit-btn">
-                    <div (click)="logout()">Submit</div>
+                    <button [disabled]="!myForm.valid" (click)="submit()">Submit</button>
                 </div>
             </div>
         </form>

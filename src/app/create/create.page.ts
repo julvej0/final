@@ -31,9 +31,8 @@ export class CreatePage implements OnInit {
 
   constructor(private navController: NavController) { }
 
-  logout(){
-    localStorage.removeItem("user")
-    this.navController.navigateForward("login")
+  submit(){
+
   }
 
   previous(){
@@ -48,15 +47,8 @@ export class CreatePage implements OnInit {
     }
   }
 
-  submit(){
-    
-  }
-
   ngOnInit() {
     this.currentStep = 1
-    if(!localStorage.getItem("user")){
-      this.navController.navigateForward("login")
-    }
     const mediaQuery = window.matchMedia('(min-width: 1430px)');
     this.hideContainer = mediaQuery.matches;
 
