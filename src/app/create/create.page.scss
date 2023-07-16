@@ -142,16 +142,12 @@ form{
             border: 2px solid white;
             --highlight-color-invalid: none;
             --highlight-color-valid: none;
-            
+            text-indent: 0px;
         }
 
         ion-card{
             background: rgb(102,153,153);
             background: linear-gradient(85deg, rgba(102,153,153,1) 32%, rgba(255,102,51,1) 150%);
-        }
-
-        .big{
-            height: 60px;
         }
 
         .funding {
@@ -217,7 +213,7 @@ input {
     border-radius: 8px;
     height: 25px;
     color: white;
-    text-indent: 10px;
+    text-indent: 2px;
     font-size: 15px;
     font-weight: 200;
 }
