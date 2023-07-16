@@ -3,18 +3,18 @@
     <ion-img src="../../assets/Logo1.png" class="logo-img signup-fab"></ion-img>
     <ion-card class="card">
       <ion-label class="indent">First Name:</ion-label>
-      <input type="text">
+      <input type="text" [(ngModel)]="firstName">
       <ion-label class="indent">Last Name:</ion-label>
-      <input type="text">
+      <input type="text" [(ngModel)]="lastName">
       <ion-label class="indent">Department:</ion-label>
       <input type="text">
       <ion-label class="indent">Email Address:</ion-label>
-      <input type="email">
+      <input type="email" [(ngModel)]="email">
       <ion-label class="indent">Password:</ion-label>
-      <input type="password">
+      <input type="password" [(ngModel)]="pass">
       <ion-label class="indent">Re Enter Password:</ion-label>
-      <input type="password">
-      <div class="signup-btn" routerLink="/login">Sign Up</div>
+      <input type="password" [(ngModel)]="confirmPass">
+      <div class="signup-btn" (click)="signup()">Sign Up</div>
     </ion-card>
   </div>
 </ion-content>

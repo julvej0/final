@@ -9,14 +9,31 @@
   <ion-content>
     <ion-buttons>
       <ion-grid>
-        <ion-row class="ion-justify-content-center">
+        <ion-row class="ion-justify-content-center ion-margin-bottom">
+          <div *ngIf="isLoggedIn" class="profile">
+            <ion-avatar>
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <p>{{name}}</p>
+          </div>
+        </ion-row>
+        <ion-row class="ion-justify-content-center ion-margin-bottom">
             <ion-button class="first-btn">Discover</ion-button>
         </ion-row>
-        <ion-row class="ion-justify-content-center">
-          <ion-button>Join</ion-button>
+        <ion-row *ngIf="!isLoggedIn" class="ion-justify-content-center ion-margin-bottom">
+          <ion-button >Join</ion-button>
         </ion-row>
-        <ion-row class="ion-justify-content-center">
+        <ion-row *ngIf="isLoggedIn" class="ion-justify-content-center ion-margin-bottom">
+          <ion-button routerLink="/create">Create</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center ion-margin-bottom">
           <ion-button routerLink="/aboutus">About Us</ion-button>
+        </ion-row>
+        <ion-row *ngIf="isLoggedIn" class="ion-justify-content-center ion-margin-bottom">
+          <ion-button  (click)="logout()">Logout</ion-button>
+        </ion-row>
+        <ion-row *ngIf="inSignUp" class="ion-justify-content-center ion-margin-bottom">
+          <ion-button routerLink="/login">Login</ion-button>
         </ion-row>
       </ion-grid>
     </ion-buttons>
@@ -31,13 +48,13 @@
     <ion-buttons slot="end">
       <ion-button class="mobile-fab">Discover</ion-button>
       <ion-button *ngIf="!isLoggedIn" class="mobile-fab">Join</ion-button>
-      <ion-button *ngIf="isLoggedIn" class="mobile-fab">Create</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="mobile-fab" routerLink="/create">Create</ion-button>
       <ion-button *ngIf="isLoggedIn" class="mobile-fab">Your Project</ion-button>
       <ion-button class="mobile-fab" routerLink="/aboutus">About Us</ion-button>
-      <div class="login-profile">
-        <ion-button *ngIf="inSignUp" class="mobile-fab login-btn">Login</ion-button>
-        <div *ngIf="isLoggedIn" class="mobile-fab profile">
-          <p>Student Name</p>
+      <div class="login-profile mobile-fab">
+        <ion-button *ngIf="inSignUp" class="login-btn" routerLink="/login">Login</ion-button>
+        <div *ngIf="isLoggedIn" class="profile">
+          <p>{{name}}</p>
           <ion-avatar>
             <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
           </ion-avatar>

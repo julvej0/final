@@ -1,0 +1,24 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-item {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    height: auto;
+  }
+}
+
+.hide{
+  display: none;
+}
+
+.here{
+  display: none;
+}

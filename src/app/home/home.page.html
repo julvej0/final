@@ -1,0 +1,34 @@
+<ion-content>
+  <form #myForm="ngForm">
+    <ng-container *ngIf="hideContainer || currentStep === 1">
+      <!-- Step 1 fields -->
+      <ion-item>
+        <ion-label>Input 1</ion-label>
+        <ion-input type="text" name="input1" required [(ngModel)]="input1"></ion-input>
+      </ion-item>
+      <!-- Add more fields for Step 1 -->
+    </ng-container>
+    
+    <ng-container *ngIf="hideContainer || currentStep === 2">
+      <!-- Step 2 fields -->
+      <ion-item>
+        <ion-label>Input 2</ion-label>
+        <ion-input type="text" name="input2" required [(ngModel)]="input2"></ion-input>
+      </ion-item>
+      <!-- Add more fields for Step 2 -->
+    </ng-container>
+    
+    
+    <ng-container *ngIf="hideContainer || currentStep === 3">
+      <!-- Step 3 fields -->
+      <ion-item>
+        <ion-label>Input 3</ion-label>
+        <ion-input type="text" name="input3" required [(ngModel)]="input3"></ion-input>
+      </ion-item>
+      <!-- Add more fields for Step 3 -->
+    </ng-container>
+   
+
+    <button ion-button block [disabled]="!myForm.valid" (click)="next()">Next</button>
+  </form>
+</ion-content>
